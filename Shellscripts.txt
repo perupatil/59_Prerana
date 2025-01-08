@@ -1,0 +1,55 @@
+Q.1
+#!/bin/bash
+
+
+echo "Enter a number:"
+read number
+
+if [ $((number % 2)) -eq 0 ]; then
+    echo "$number is even."
+else
+    echo "$number is odd."
+fi
+
+**************to run ************
+chmod +x check_even_odd.sh
+./check_even_odd.sh
+
+
+***************************
+
+
+Q.2
+#!/bin/bash
+
+# Get current date and time
+current_date_time=$(date +"%Y-%m-%d %H:%M:%S")
+
+# Get the username
+username=$(whoami)
+
+# Get the current working directory
+current_directory=$(pwd)
+
+# Print the information
+echo "Current Date and Time: $current_date_time"
+echo "Username: $username"
+echo "Current Working Directory: $current_directory"
+
+**************************
+
+Q.3
+#!/bin/bash
+
+# Define the filename
+filename="Shell.txt"
+
+# Check if the file exists
+if [ ! -f "$filename" ]; then
+    echo "Error: File '$filename' does not exist."
+    exit 1
+fi
+
+# Display the first 10 lines of the file
+echo "First 10 lines of '$filename':"
+head -n 10 "$filename"
