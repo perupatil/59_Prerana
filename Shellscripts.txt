@@ -53,3 +53,26 @@ fi
 # Display the first 10 lines of the file
 echo "First 10 lines of '$filename':"
 head -n 10 "$filename"
+
+**************************
+
+Q.4
+
+filename="File1.txt"
+
+
+if [ ! -f "$filename" ]; then
+    echo "Error: File '$filename' does not exist."
+    exit 1
+fi
+
+
+line_count=$(wc -l < "$filename")
+word_count=$(wc -w < "$filename")
+char_count=$(wc -m < "$filename")
+
+
+echo "File: $filename"
+echo "Number of lines: $line_count"
+echo "Number of words: $word_count"
+echo "Number of characters: $char_count"
